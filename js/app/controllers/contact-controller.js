@@ -1,0 +1,14 @@
+
+angular.module('App').controller('ContactController', function ($scope) {
+
+    $scope.contactData = {
+        companyName: 'HolleBM Webdevelopment',
+        street: 'Hazeleger',
+        streetNumber: '159',
+        postcode: '5431 HR',
+        city: 'Cuijk',
+        phone: '06 - 1404 5334',
+        email: 'info@hollebm.nl'
+    };
+
+});

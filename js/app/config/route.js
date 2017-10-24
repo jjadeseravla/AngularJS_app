@@ -8,6 +8,7 @@ $routeProvider
     })
     .when('/contact', {
         templateUrl: 'partials/pages/contact.html'
+        controller: 'ContactController'
     })
     .otherwise({
         redirectTo: '/'
