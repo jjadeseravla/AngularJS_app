@@ -1,14 +1,9 @@
+angular.module('App').controller('ContactController', ['$scope', 'ContactService', function ($scope, contactService) {
 
-angular.module('App').controller('ContactController', function ($scope) {
+    contactService.get().then(function (data) {
+        $scope.contactData = data;
+    }, function (error) {
+        console.log(error);
+    });
 
-    $scope.contactData = {
-        companyName: 'HolleBM Webdevelopment',
-        street: 'Hazeleger',
-        streetNumber: '159',
-        postcode: '5431 HR',
-        city: 'Cuijk',
-        phone: '06 - 1404 5334',
-        email: 'info@hollebm.nl'
-    };
-
-});
+}]);
